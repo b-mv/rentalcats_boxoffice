@@ -6,6 +6,9 @@ Created on Sun Mar 24 16:59:04 2019
 @author: paulburgoine
 """
 
+import pandas as pd
+import numpy as np
+
 ### Function to provide an overview of a dataframe
 
 def describe_data(df, head = 5):
@@ -32,7 +35,7 @@ def describe_data(df, head = 5):
     
     # describe columns
     print('Categorical Columns (type = object):')
-    display(df.select_dtypes('object').describe().T.round(2))
+    #display(df.select_dtypes('object').describe().T.round(2))
     print('')
     print('Numeric Columns:')
     display(df.describe().T.round(2))
